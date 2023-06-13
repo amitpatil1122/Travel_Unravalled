@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="jquery.js">
+
+    </script>
+</head>
+<title>Travel Unravelled</title>
+
+<body>
+    <header>
+        <img src="images/logo3.png">
+        <p><i>Time to travel</i></p>
+        <div class="social">
+            <a href="https://www.facebook.com/" target="blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"
+                target="blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/login" target="blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/" target="blank"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </header>
+
+    <div class="main-container">
+
+        <nav>
+
+            <ul>
+                <li style="border-bottom: 2px solid;border-color:rgb(76, 184, 3);"><a href="index.html  "
+                        style="color:rgb(76, 184, 3);">Home</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="our_services.html">Our service</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+        </nav>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="images/carousel-3.jpg" style="width:100%">
+                <div class="text">Experience Your Dream Destinations</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="images/carousel-1.jpg" style="width:100%">
+                <div class="text">Make Memories That Last a Lifetime</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="images/carousel-2.jpg" style="width:100%">
+                <div class="text">Find Your Adventure with Us</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                // setTimeout(showSlides, 2000);
+            }
+        </script>
+
+        <div class="about">
+            <h1>- About -</h1>
+            <p>
+                Welcome to our Travel Unravelled website! We aim to provide you with all the information you need to
+                plan the perfect trip. Our website features travel guides, reviews, and recommendations from experienced
+                travelers and locals alike.
+
+                Our travel guides cover everything from popular tourist destinations to off-the-beaten-path locations
+                that you won't find in most guidebooks. We also provide information on the best time to visit each
+                location, as well as tips on where to stay, eat, and explore.<br><br>
+
+                In addition to our travel guides, we also offer reviews of hotels, restaurants, and other travel-related
+                services. Our team of experienced travelers provide honest and unbiased reviews to help you make
+                informed decisions.
+
+                Whether you're planning a romantic getaway, a family vacation, or a solo adventure, our website has
+                something for everyone. We strive to make travel planning easy and stress-free, so you can focus on
+                enjoying your trip to the fullest.<br><br>
+
+                So start exploring our website today and discover your next adventure!
+            </p>
+
+        </div>
+
+        <div class="destinations">
+
+            <h3 style="padding-top: 50px;">"Select your preferred adventure type from below and we'll help you plan the
+                trip of a lifetime!"</h3>
+
+            <div class="destination tour1">
+                <a href="waterfall.html">
+                <img src="images/adventure2_waterfall.jpg">
+                <p>Waterfall</p></a>
+            </div>
+            <div class="destination tour2">
+                <a href="beach.html"> <img src="images/beach_tour.jpg">
+                <p>Beach</p></a>
+            </div>
+            <div class="destination tour3">
+                <a href="cultural.html"> <img src="images/Cultural/cultural_bg1.jpg">
+                <p>Cultural</p></a>
+            </div>
+            <div class="destination tour4">
+                <a href="wild_life.html"> <img src="images/wildlife_tours.jpeg">
+                <p>Wildlife</p></a>
+            </div>
+            <div class="destination tour5">
+                <a href="food_tours.html"> <img src="images/food_tours.jpg">
+                <p>Foodie</p></a>
+            </div>
+            <div class="destination tour6">
+                <a href="devotional.html"> <img src="images/devotional_tour.jpg">
+                <p>Devotional</p></a>
+            </div>
+            <div class="destination tour7">
+                <a href="sports.html"> <img src="images/sports_tour.jpg">
+                <p>Sports</p></a>
+            </div>
+            <div class="destination tour8">
+                <a href="road_trips.html"> <img src="images/roadtrips.jpg">
+                <p>Roadtrips</p></a>
+            </div>
+            <div class="destination tour9">
+                <a href="mountains.html"> <img src="images/mountain_tours.jpg">
+                <p>Mountains</p></a>
+            </div>
+
+        </div>
+
+        <div class="home_info">
+            <p><br>If your expeditions are incomplete without at least one adrenaline-pumping adventure activity in your itinerary, you have landed on the right adventure tour blog page. Find yourself an adventure blog on the destination that you're planning to go to or check out the most thrilling sports across the globe. </p><br>
+        </div>
+
+        <footer>
+            <h3>Copyright © <a href="index.html" style="color:rgb(112, 218, 41)">Travel Unravelled.</a> All Rights Reserved.</h3>
+        </footer>
+
+    </div>
+    
+</body>
+
+</html>

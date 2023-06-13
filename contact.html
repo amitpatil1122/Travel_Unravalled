@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="jquery.js"></script>
+    <script src="contact.js"></script>
+</head>
+<title>Travel Unravelled</title>
+
+<body>
+    <header>
+        <img src="images/logo3.png">
+        <p><i>Time to travel</i></p>
+        <div class="social">
+            <a href="https://www.facebook.com/" target="blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"
+                target="blank"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/login" target="blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/" target="blank"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="https://www.youtube.com/" target="blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </header>
+
+    <div class="main-container">
+
+        <nav>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="our_services.html">Our service</a></li>
+                <li style="border-bottom: 2px solid;border-color:rgb(76, 184, 3);"><a href="contact.html" style="color:rgb(76, 184, 3);">Contact</a></li>
+            </ul>
+
+        </nav>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="images/contact/contact_bg.jpg" style="width:100%;">
+                <div class="text">We Want to Hear from You!</div>
+            </div>
+
+
+        </div>
+        <br>
+
+        <h3 id="contact_heading">Contact For Any Query</h3><br>
+        <div class="contact_details">
+
+            <table>
+                <tr><td>
+                    <form onsubmit="return valid()">
+                        <!-- <fieldset> -->
+
+     
+                    <table border="0px" cellpadding="0px" cellspacing="5px">
+                        <tr><td></td><td></td></tr>
+                            <tr>
+                            <td><label>First Name: <span>*</span></label></td><td><input type="text" name="first_nm" id="f_nm" placeholder="  Enter First Name" onclick="border_des()"></td>
+                            <td><label>Last Name: <span>*</span></label></td><td><input type="text" name="last_nm" id="l_nm" placeholder="  Enter Last Name"></td>
+                        </tr>
+                        <tr><td></td><td><span id="f_msg" class="msg"></span></td>
+                        <td></td><td><span id="l_msg" class="msg"></span></td></tr>
+                        <tr>
+                            <td><label>E-mail: <span>*</span></label></td><td><input type="email" name="email" id="email" placeholder="  Enter Email"></td>
+                            <td><label>Contact No: <span>*</span></label></td><td><input type="number" name="phone_no" id="ph_no" placeholder="  Enter Contact No"></td>
+                        </tr>
+                        <tr><td></td><td><span id="mail_msg" class="msg"></span></td>
+                            <td></td><td><span id="ph_msg" class="msg"></span></td></tr>
+                        <tr>
+                            <td><label>Age: <span>*</span></label></td><td><input type="number" name="age" id="age" placeholder="  Enter Age"></td>
+                            <td><label>Gender: <span>*</span></label></td><td class="g"><input type="radio" name="gender" class="gender" style="width:10px"> Male
+                                                                <input type="radio" name="gender" class="gender" style="width:10px"> Female</td>
+                        </tr>
+                        <tr><td></td><td><span id="age_msg" class="msg"></span></td>
+                            <td></td><td><span id="g_msg" class="msg"></span></td></tr>
+                        <tr>
+                            <td><label>Subject:<span>*</span></label></td><td colspan="3"><input type="text" name="subject" id="sub" style="width:90%" placeholder="  Enter Subject"></td>
+                        </tr>
+                        <tr><td></td><td><span id="sub_msg" class="msg"></span></td></tr>
+                        <tr>
+                            <td><label>Message: <span>*</span></label></td><td colspan="3"><textarea name="msg" id="msg" rows="8" cols="80%" placeholder="  Enter Message"></textarea></td>
+                        </tr>
+                        <tr><td></td><td><span id="msg_msg" class="msg"></span></td></tr>
+                        <tr><td colspan="4" align="center"><input type="submit" name="submit" value=" Send Message " id="send_btn"> </td></tr>
+                        
+                        
+                    </table>
+                <!-- </fieldset> -->
+            </form>
+                </td></tr>
+            </table>
+
+            
+
+        </div>
+
+        <footer>
+            <h3>Copyright © <a href="index.html" style="color:rgb(112, 218, 41)">Travel Unravelled.</a> All Rights Reserved.</h3>
+        </footer>
+
+    </div>
+    
+</body>
+
+</html>
